@@ -15,7 +15,7 @@ Goal: choose a stack and be able to explain why.
 - [ ] Decision Log: positioning of Betsy (single site, neutral, explainable, configurable approval)
 - [ ] Decision Log: why independent restaurants in Eindhoven
 - [ ] Niche card with real data + persona
-- [ ] Repo with docs/ROADMAP.md
+- [x] Repo with docs/ROADMAP.md (25 Nov)
 - [ ] Two mock restaurant profiles
 
 ## G01 One agent · 1–5 Dec 2026
