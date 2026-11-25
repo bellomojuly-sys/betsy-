@@ -1,0 +1,96 @@
+[
+  {
+    "id": "DOC-01",
+    "supplier": "SUP-VANBEEK",
+    "title": "Van Beek Groente & Fruit — agreement with Bistro Vonk",
+    "used_by": [
+      "R-VONK"
+    ],
+    "file": "docs/doc-01.md"
+  },
+  {
+    "id": "DOC-02",
+    "supplier": "SUP-VANBEEK",
+    "title": "Van Beek — price list week 48 (2026)",
+    "used_by": [
+      "R-VONK"
+    ],
+    "file": "docs/doc-02.md"
+  },
+  {
+    "id": "DOC-03",
+    "supplier": "SUP-HENDRIKS",
+    "title": "Slagerij Hendriks — price agreement Bistro Vonk",
+    "used_by": [
+      "R-VONK"
+    ],
+    "file": "docs/doc-03.md"
+  },
+  {
+    "id": "DOC-04",
+    "supplier": "SUP-NOORDZEE",
+    "title": "Vishandel Noordzee — terms and availability",
+    "used_by": [
+      "R-VONK"
+    ],
+    "file": "docs/doc-04.md"
+  },
+  {
+    "id": "DOC-05",
+    "supplier": "SUP-BRABANT",
+    "title": "Brabant Dranken — supply terms",
+    "used_by": [
+      "R-VONK",
+      "R-KIEM"
+    ],
+    "file": "docs/doc-05.md"
+  },
+  {
+    "id": "DOC-06",
+    "supplier": "SUP-DELTA",
+    "title": "Groothandel Delta — delivery terms",
+    "used_by": [
+      "R-VONK",
+      "R-KIEM"
+    ],
+    "file": "docs/doc-06.md"
+  },
+  {
+    "id": "DOC-07",
+    "supplier": "SUP-DELTA",
+    "title": "Groothandel Delta — promotion leaflet week 49",
+    "used_by": [
+      "R-VONK",
+      "R-KIEM"
+    ],
+    "file": "docs/doc-07.md"
+  },
+  {
+    "id": "DOC-08",
+    "supplier": "SUP-ZUIVEL",
+    "title": "Zuivel Direct — price list and ordering rules",
+    "used_by": [
+      "R-VONK",
+      "R-KIEM"
+    ],
+    "file": "docs/doc-08.md"
+  },
+  {
+    "id": "DOC-09",
+    "supplier": "SUP-BRANDHUIS",
+    "title": "Brandhuis Koffie — coffee contract Café Kiem",
+    "used_by": [
+      "R-KIEM"
+    ],
+    "file": "docs/doc-09.md"
+  },
+  {
+    "id": "DOC-10",
+    "supplier": "SUP-KORENBLOEM",
+    "title": "Bakkerij De Korenbloem — ordering rules",
+    "used_by": [
+      "R-KIEM"
+    ],
+    "file": "docs/doc-10.md"
+  }
+]

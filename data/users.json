@@ -1,0 +1,171 @@
+{
+  "note": "Personas are fictional composites built from the Betsy questionnaire (14 answers, 16-19 Nov 2026), the coworking café conversation (24 Nov 2026) and the competitor analysis. 'form' = count out of 14 respondents; 'assumption' = not measured yet.",
+  "personas": [
+    {
+      "id": "U-MARK",
+      "business": "R-VONK",
+      "name": "Mark de Vries",
+      "age": 41,
+      "role": "Owner-chef, Bistro Vonk",
+      "primary": true,
+      "day": "Cooks every service. Orders at the end of the shift, around 22:30, standing in the kitchen with his phone.",
+      "how_he_buys": [
+        "Looks at shelves and fridges to decide what to order (form: 12/14)",
+        "Orders by WhatsApp and phone; webshop only for the wholesaler (form: WhatsApp 11/14)",
+        "6 suppliers, about one order per working day (form: 6-10 orders a week, 8/14)",
+        "Spends 3-5 hours a week on ordering, deliveries and invoices (form: 8/14)"
+      ],
+      "pains": [
+        "Has to be physically there to see what is missing",
+        "Delivery errors he only notices during service (form: monthly or more, 6/14)",
+        "A forgotten cut-off means a supermarket run the next day (form: monthly or more, 5/14)"
+      ],
+      "will_not_give_up": [
+        "The final say on every order (form: send alone OK for only 2/14)",
+        "His butcher and greengrocer: agreements made in person (open answers)"
+      ],
+      "wants_from_betsy": "A ready order he can approve in one tap, with the reason next to every line.",
+      "quote": "I want to keep control. Just tell me what's missing and why."
+    },
+    {
+      "id": "U-SANNE",
+      "business": "R-KIEM",
+      "name": "Sanne Peeters",
+      "age": 34,
+      "role": "Owner, Café Kiem",
+      "primary": true,
+      "day": "Behind the counter from opening. Does the admin between the lunch rush and closing; orders for the next day before the bakery's 14:00 cut-off.",
+      "how_she_buys": [
+        "Fewer suppliers than a restaurant (5), but daily fresh products: bakery and milk every day",
+        "Demand moves with weather and events on the square (assumption)",
+        "Fixed prices with her coffee roaster through a contract that includes the espresso machine",
+        "Writes in Dutch"
+      ],
+      "pains": [
+        "Croissants left over on quiet days, sold out by 10:00 on busy ones (assumption, to validate)",
+        "Counting milk and oat milk every afternoon",
+        "Short deliveries from the bakery that still appear on the invoice"
+      ],
+      "will_not_give_up": [
+        "Sending orders herself",
+        "Her roaster contract: price comparison on coffee is pointless"
+      ],
+      "wants_from_betsy": "The daily list prepared without asking, so she only checks and sends.",
+      "quote": "Make the list for me. I'll look at it before I send it."
+    },
+    {
+      "id": "U-YOUSSEF",
+      "business": "R-VONK",
+      "name": "Youssef Amrani",
+      "age": 26,
+      "role": "Shift lead, Bistro Vonk",
+      "primary": false,
+      "day": "Closes the kitchen on the evenings Mark is not there and receives deliveries in the morning.",
+      "how_he_buys": [
+        "Counts stock and receives deliveries; does not order (form: who orders 'it changes' in 3/14)"
+      ],
+      "pains": [
+        "Does not know the agreed prices, so cannot judge a delivery note"
+      ],
+      "will_not_give_up": [],
+      "wants_from_betsy": "Send the count in one message and know immediately whether a delivery is complete.",
+      "quote": "I just want to send the count and go home."
+    }
+  ],
+  "ideal_profiles": [
+    {
+      "id": "ICP-RESTAURANT",
+      "title": "Ideal restaurant",
+      "example": "R-VONK",
+      "criteria": [
+        {"label": "Ownership", "value": "Independent, one location", "evidence": "form 14/14 independent"},
+        {"label": "Size", "value": "6-15 staff, 40-80 covers", "evidence": "form 13/14 with 15 staff or fewer"},
+        {"label": "Who buys", "value": "Owner or owner-chef, on a phone, after service", "evidence": "form 9/14 the respondent orders"},
+        {"label": "Suppliers", "value": "3-8: produce, meat, fish, dairy, wholesaler, drinks", "evidence": "form 3-5: 8/14, 6-10: 4/14"},
+        {"label": "Order rhythm", "value": "6-10 orders a week, each supplier with its own cut-off", "evidence": "form 8/14"},
+        {"label": "Stock data", "value": "None digital: counts by eye", "evidence": "form 12/14"},
+        {"label": "Channel", "value": "WhatsApp and phone", "evidence": "form 11/14 WhatsApp"},
+        {"label": "Agreements", "value": "At least one contracted or personal supplier", "evidence": "open answers, 2 owners"},
+        {"label": "Time lost", "value": "3-5 hours a week on purchasing", "evidence": "form 8/14"}
+      ],
+      "good_fit_signals": [
+        "Supermarket runs or stockouts at least monthly",
+        "Delivery errors noticed late",
+        "Owner wants suggestions but keeps the send button"
+      ],
+      "not_a_fit": [
+        "Chains with central purchasing",
+        "Kitchens already on stock software with suggested orders (Apicbase, MarketMan, Nory)",
+        "Hotels and catering companies"
+      ]
+    },
+    {
+      "id": "ICP-CAFE",
+      "title": "Ideal café or bar",
+      "example": "R-KIEM",
+      "criteria": [
+        {"label": "Ownership", "value": "Independent, one location", "evidence": "form 5/14 are cafés or bars, all independent"},
+        {"label": "Size", "value": "3-8 staff", "evidence": "assumption"},
+        {"label": "Who buys", "value": "Owner, between rush hours", "evidence": "form 9/14 the respondent orders"},
+        {"label": "Suppliers", "value": "4-5: roaster, bakery, dairy, wholesaler, drinks", "evidence": "assumption from the café case"},
+        {"label": "Order rhythm", "value": "Daily for bakery and milk, weekly for the rest", "evidence": "assumption"},
+        {"label": "Stock data", "value": "None or the ordering portal of one supplier", "evidence": "café case: AI on the ordering portal, checked by hand"},
+        {"label": "Channel", "value": "WhatsApp, webshop, email to the roaster", "evidence": "form 11/14 WhatsApp"},
+        {"label": "Agreements", "value": "Coffee contract with machine on loan", "evidence": "assumption, common in NL horeca"},
+        {"label": "Language", "value": "Dutch", "evidence": "form available in EN/NL"}
+      ],
+      "good_fit_signals": [
+        "Daily fresh products thrown away or sold out",
+        "Already trying AI for ordering (the coworking café)"
+      ],
+      "not_a_fit": [
+        "Chains and franchises",
+        "Bars with a full drinks-only supply contract (nothing to decide)"
+      ]
+    }
+  ],
+  "user_stories": [
+    {"id": "US-01", "persona": "U-MARK", "priority": "M", "requirements": ["FR-02"], "gate": "G01",
+     "story": "As an owner-chef, I want to send my stock count as one quick message after service, so that I don't have to fill in a form or open an app.",
+     "acceptance": ["Free text in English or Dutch is turned into a table of product and quantity", "Words like 'ok' or 'plenty' mean no order is needed", "Anything unclear gets one short question, not a guess", "Mark sees the parsed table before anything else happens"]},
+    {"id": "US-02", "persona": "U-MARK", "priority": "M", "requirements": ["FR-03"], "gate": "G01",
+     "story": "As an owner-chef, I want a reminder before a supplier's cut-off when a product is running low, so that I don't end up at the supermarket the next day.",
+     "acceptance": ["The reminder comes before the cut-off of the next delivery day", "It names the products below their reorder level", "No reminder when stock is fine"]},
+    {"id": "US-03", "persona": "U-MARK", "priority": "M", "requirements": ["FR-04", "NFR-01"], "gate": "G01",
+     "story": "As an owner-chef, I want one order proposal per supplier with a reason on every line, so that I can check it in seconds.",
+     "acceptance": ["Quantity brings the product back to par", "Each line has a one-sentence reason and the data it used", "Orders below a supplier's minimum are flagged with the fee"]},
+    {"id": "US-04", "persona": "U-MARK", "priority": "M", "requirements": ["FR-05", "NFR-06"], "gate": "G01",
+     "story": "As an owner-chef, I want to approve, edit or reject every order, so that nothing reaches a supplier without me.",
+     "acceptance": ["Approve, edit and reject are always available", "An edited order is shown again before sending", "Without explicit approval the status stays 'draft'"]},
+    {"id": "US-05", "persona": "U-MARK", "priority": "M", "requirements": ["FR-09", "FR-10"], "gate": "G01-G02",
+     "story": "As an owner with agreements with my butcher and greengrocer, I want Betsy to always order from them, so that my relationships and contracts are respected.",
+     "acceptance": ["A contracted or preferred supplier is never replaced", "When a rule comes from a document, Betsy cites it (e.g. DOC-03)"]},
+    {"id": "US-06", "persona": "U-MARK", "priority": "S", "requirements": ["FR-08"], "gate": "G02",
+     "story": "As an owner-chef, I want to see when another supplier is cheaper, so that I can bring it up with my supplier myself.",
+     "acceptance": ["The difference is shown as information next to the line", "The proposal itself does not change supplier"]},
+    {"id": "US-07", "persona": "U-YOUSSEF", "priority": "M", "requirements": ["FR-06"], "gate": "G04",
+     "story": "As a shift lead receiving a delivery, I want it compared with the order, so that missing or wrong items are reported the same day.",
+     "acceptance": ["Missing quantities and wrong items are listed per line", "The supplier's claim deadline is shown (e.g. 24 h for Hendriks)", "A claim message is drafted, sent only after the owner approves"]},
+    {"id": "US-08", "persona": "U-MARK", "priority": "S", "requirements": ["FR-07"], "gate": "G04",
+     "story": "As an owner-chef, I want invoices checked against the order, the delivery and the agreed prices, so that I don't pay for what I didn't get.",
+     "acceptance": ["Flags price above agreement, billed but not delivered, and duplicate invoice numbers", "Each flag shows the amount at stake", "No dispute is sent without approval"]},
+    {"id": "US-09", "persona": "U-SANNE", "priority": "M", "requirements": ["FR-03", "FR-04"], "gate": "G01",
+     "story": "As a café owner, I want tomorrow's bakery order adjusted to what I tell Betsy about the day, so that I sell out less and throw away less.",
+     "acceptance": ["Starts from the usual need for that weekday", "Uses signals in the message (leftovers, a market, rain) and quotes them as the reason", "Arrives before the bakery's 14:00 cut-off"]},
+    {"id": "US-10", "persona": "U-SANNE", "priority": "M", "requirements": ["FR-01"], "gate": "G00-G01",
+     "story": "As a café owner, I want Betsy to work in Dutch with my own suppliers and rules, so that it fits my café and not a restaurant.",
+     "acceptance": ["Messages and proposals in the profile's language", "Same agents, different profile: no code change between Vonk and Kiem"]},
+    {"id": "US-11", "persona": "U-SANNE", "priority": "M", "requirements": ["NFR-06"], "gate": "G01",
+     "story": "As a café owner, I want to choose per action what Betsy may do alone, so that it prepares my list without asking but never sends it.",
+     "acceptance": ["Each action has a mode: alone, approval or never", "Kiem: suggest = alone, send = approval, compare prices = never"]},
+    {"id": "US-12", "persona": "U-YOUSSEF", "priority": "M", "requirements": ["FR-05", "NFR-07"], "gate": "G01",
+     "story": "As a shift lead, I want to send counts without being able to approve orders, so that the owner keeps control even when I'm closing.",
+     "acceptance": ["Counts from staff update stock", "A staff message asking to skip approval is ignored and the owner is asked"]},
+    {"id": "US-13", "persona": "U-MARK", "priority": "S", "requirements": ["NFR-07"], "gate": "G03-G04",
+     "story": "As an owner, I want text inside invoices and supplier documents never to change what Betsy does, so that nobody can order on my behalf by writing a note.",
+     "acceptance": ["Instructions found in documents are treated as data", "The three injection cases (INJ-01 to INJ-03) pass"]},
+    {"id": "US-14", "persona": "builder", "priority": "M", "requirements": ["NFR-02", "NFR-03", "NFR-04", "NFR-05"], "gate": "G03",
+     "story": "As the developer of Betsy, I want every run traced and measured on the scenario set, so that I can choose models and prove the team beats the single agent.",
+     "acceptance": ["Each run records agent, tools, model, tokens, cost, latency and outcome", "The dashboard compares models and agents on the same 15 scenarios"]}
+  ]
+}

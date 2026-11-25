@@ -1,0 +1,211 @@
+{
+  "restaurant": "R-KIEM",
+  "stock_messages": [
+    {
+      "id": "SM-K01",
+      "from": "U-SANNE",
+      "sent": "2026-11-30T17:45",
+      "lang": "nl",
+      "text": "melk nog 10 liter, havermelk 6, bonen 5 zakken, decaf 1. bekers 3 pakken, munt op"
+    },
+    {
+      "id": "SM-K02",
+      "from": "U-SANNE",
+      "sent": "2026-12-03T17:30",
+      "lang": "nl",
+      "text": "croissants vandaag 12 over. morgen is er markt op het plein dus wordt het drukker"
+    },
+    {
+      "id": "SM-K03",
+      "from": "U-DAAN",
+      "sent": "2026-12-04T17:50",
+      "lang": "nl",
+      "text": "melk bijna op"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORD-K-2001",
+      "supplier": "SUP-KORENBLOEM",
+      "placed": "2026-11-26",
+      "delivery": "2026-11-27",
+      "status": "delivered",
+      "lines": [
+        {
+          "product": "C-005",
+          "qty": 45
+        },
+        {
+          "product": "C-006",
+          "qty": 8
+        },
+        {
+          "product": "C-007",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "id": "ORD-K-2002",
+      "supplier": "SUP-BRANDHUIS",
+      "placed": "2026-11-20",
+      "delivery": "2026-11-23",
+      "status": "delivered",
+      "lines": [
+        {
+          "product": "C-001",
+          "qty": 8
+        },
+        {
+          "product": "C-002",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "id": "ORD-K-2003",
+      "supplier": "SUP-ZUIVEL",
+      "placed": "2026-11-27",
+      "delivery": "2026-11-28",
+      "status": "delivered",
+      "lines": [
+        {
+          "product": "C-003",
+          "qty": 30
+        }
+      ]
+    }
+  ],
+  "deliveries": [
+    {
+      "id": "DEL-K-2001",
+      "order": "ORD-K-2001",
+      "received": "2026-11-27T07:05",
+      "received_by": "U-DAAN",
+      "lines": [
+        {
+          "product": "C-005",
+          "qty": 40
+        },
+        {
+          "product": "C-006",
+          "qty": 8
+        },
+        {
+          "product": "C-007",
+          "qty": 2
+        }
+      ],
+      "seeded_issue": "5 croissants missing"
+    },
+    {
+      "id": "DEL-K-2002",
+      "order": "ORD-K-2002",
+      "received": "2026-11-23T09:30",
+      "received_by": "U-SANNE",
+      "lines": [
+        {
+          "product": "C-001",
+          "qty": 8
+        },
+        {
+          "product": "C-002",
+          "qty": 1
+        }
+      ],
+      "seeded_issue": null
+    },
+    {
+      "id": "DEL-K-2003",
+      "order": "ORD-K-2003",
+      "received": "2026-11-28T07:20",
+      "received_by": "U-DAAN",
+      "lines": [
+        {
+          "product": "C-003",
+          "qty": 30
+        }
+      ],
+      "seeded_issue": null
+    }
+  ],
+  "invoices": [
+    {
+      "id": "INV-K-2001",
+      "supplier": "SUP-KORENBLOEM",
+      "invoice_number": "KB-1127",
+      "date": "2026-11-27",
+      "order": "ORD-K-2001",
+      "lines": [
+        {
+          "product": "C-005",
+          "qty": 45,
+          "unit_price_eur": 0.95
+        },
+        {
+          "product": "C-006",
+          "qty": 8,
+          "unit_price_eur": 4.2
+        },
+        {
+          "product": "C-007",
+          "qty": 2,
+          "unit_price_eur": 19.5
+        }
+      ],
+      "total_eur": 115.35
+    },
+    {
+      "id": "INV-K-2002",
+      "supplier": "SUP-BRANDHUIS",
+      "invoice_number": "BK-26-0441",
+      "date": "2026-11-23",
+      "order": "ORD-K-2002",
+      "lines": [
+        {
+          "product": "C-001",
+          "qty": 8,
+          "unit_price_eur": 25.5
+        },
+        {
+          "product": "C-002",
+          "qty": 1,
+          "unit_price_eur": 26.5
+        }
+      ],
+      "total_eur": 230.5
+    },
+    {
+      "id": "INV-K-2003",
+      "supplier": "SUP-ZUIVEL",
+      "invoice_number": "ZD-338190",
+      "date": "2026-11-28",
+      "order": "ORD-K-2003",
+      "lines": [
+        {
+          "product": "C-003",
+          "qty": 30,
+          "unit_price_eur": 1.1
+        }
+      ],
+      "total_eur": 33.0
+    }
+  ],
+  "expected_flags": [
+    {
+      "source": "DEL-K-2001",
+      "type": "missing_item",
+      "detail": "C-005 ordered 45, delivered 40"
+    },
+    {
+      "source": "INV-K-2001",
+      "type": "billed_not_delivered",
+      "detail": "C-005 invoiced 45, delivered 40"
+    },
+    {
+      "source": "INV-K-2002",
+      "type": "price_above_agreement",
+      "detail": "C-001 invoiced 25.50, agreed 24.00 (DOC-09)"
+    }
+  ]
+}
