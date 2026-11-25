@@ -1,0 +1,384 @@
+{
+  "id": "R-VONK",
+  "name": "Bistro Vonk",
+  "type": "restaurant",
+  "fictional": true,
+  "location": "Eindhoven city centre",
+  "independent": true,
+  "staff": 12,
+  "covers": {
+    "weekday": 45,
+    "friday_saturday": 80
+  },
+  "opening": {
+    "days": [
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+    ],
+    "hours": "17:00-22:30"
+  },
+  "language": "en",
+  "people": [
+    {
+      "id": "U-MARK",
+      "name": "Mark de Vries",
+      "role": "owner-chef",
+      "can_approve": true,
+      "channel": "whatsapp"
+    },
+    {
+      "id": "U-YOUSSEF",
+      "name": "Youssef Amrani",
+      "role": "shift lead",
+      "can_approve": false,
+      "channel": "whatsapp"
+    }
+  ],
+  "autonomy": {
+    "suggest_order": "approval",
+    "send_order": "approval",
+    "check_delivery": "alone",
+    "check_invoice": "alone",
+    "dispute_invoice": "approval",
+    "compare_prices": "alone",
+    "switch_supplier": "never"
+  },
+  "suppliers": [
+    {
+      "id": "SUP-VANBEEK",
+      "name": "Van Beek Groente & Fruit",
+      "category": "fresh produce",
+      "channel": "whatsapp",
+      "delivery_days": [
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat"
+      ],
+      "cutoff": {
+        "days_before": 1,
+        "time": "20:00"
+      },
+      "min_order_eur": 0,
+      "relationship": "preferred",
+      "agreement_doc": "DOC-01",
+      "note": "Family business, supplier for 8 years. Personal agreement: first choice for all produce."
+    },
+    {
+      "id": "SUP-HENDRIKS",
+      "name": "Slagerij Hendriks",
+      "category": "meat",
+      "channel": "whatsapp",
+      "delivery_days": [
+        "Tue",
+        "Thu",
+        "Sat"
+      ],
+      "cutoff": {
+        "days_before": 1,
+        "time": "16:00"
+      },
+      "min_order_eur": 0,
+      "relationship": "contracted",
+      "agreement_doc": "DOC-03",
+      "note": "Fixed prices until 31 March 2027."
+    },
+    {
+      "id": "SUP-NOORDZEE",
+      "name": "Vishandel Noordzee",
+      "category": "fish",
+      "channel": "phone",
+      "delivery_days": [
+        "Wed",
+        "Fri"
+      ],
+      "cutoff": {
+        "days_before": 1,
+        "time": "12:00"
+      },
+      "min_order_eur": 0,
+      "relationship": "standard",
+      "agreement_doc": "DOC-04",
+      "note": "Market prices, change weekly."
+    },
+    {
+      "id": "SUP-ZUIVEL",
+      "name": "Zuivel Direct",
+      "category": "dairy",
+      "channel": "webshop",
+      "delivery_days": [
+        "Tue",
+        "Thu",
+        "Sat"
+      ],
+      "cutoff": {
+        "days_before": 1,
+        "time": "18:00"
+      },
+      "min_order_eur": 50,
+      "relationship": "standard",
+      "agreement_doc": "DOC-08",
+      "note": ""
+    },
+    {
+      "id": "SUP-DELTA",
+      "name": "Groothandel Delta",
+      "category": "wholesaler (dry goods, cleaning)",
+      "channel": "webshop",
+      "delivery_days": [
+        "Tue",
+        "Fri"
+      ],
+      "cutoff": {
+        "days_before": 1,
+        "time": "22:00"
+      },
+      "min_order_eur": 150,
+      "relationship": "standard",
+      "agreement_doc": "DOC-06",
+      "note": "Delivery fee EUR 15 below the minimum order."
+    },
+    {
+      "id": "SUP-BRABANT",
+      "name": "Brabant Dranken",
+      "category": "drinks",
+      "channel": "sales rep + webshop",
+      "delivery_days": [
+        "Thu"
+      ],
+      "cutoff": {
+        "days_before": 2,
+        "time": "17:00"
+      },
+      "min_order_eur": 0,
+      "relationship": "contracted",
+      "agreement_doc": "DOC-05",
+      "note": "Exclusive draught beer contract; EUR 30 deposit per keg."
+    }
+  ],
+  "products": [
+    {
+      "id": "P-001",
+      "name": "Tomatoes",
+      "unit": "box 6 kg",
+      "par": 4,
+      "reorder_at": 2,
+      "supplier": "SUP-VANBEEK",
+      "price_eur": 14.5
+    },
+    {
+      "id": "P-002",
+      "name": "Onions",
+      "unit": "bag 10 kg",
+      "par": 2,
+      "reorder_at": 1,
+      "supplier": "SUP-VANBEEK",
+      "price_eur": 9.8
+    },
+    {
+      "id": "P-003",
+      "name": "Potatoes",
+      "unit": "bag 25 kg",
+      "par": 2,
+      "reorder_at": 1,
+      "supplier": "SUP-VANBEEK",
+      "price_eur": 18.0
+    },
+    {
+      "id": "P-004",
+      "name": "Salad mix",
+      "unit": "crate 2 kg",
+      "par": 3,
+      "reorder_at": 1,
+      "supplier": "SUP-VANBEEK",
+      "price_eur": 11.2
+    },
+    {
+      "id": "P-005",
+      "name": "Lemons",
+      "unit": "box 5 kg",
+      "par": 2,
+      "reorder_at": 1,
+      "supplier": "SUP-VANBEEK",
+      "price_eur": 12.4
+    },
+    {
+      "id": "P-006",
+      "name": "Fresh herbs mix",
+      "unit": "pack",
+      "par": 6,
+      "reorder_at": 3,
+      "supplier": "SUP-VANBEEK",
+      "price_eur": 2.1
+    },
+    {
+      "id": "P-007",
+      "name": "Beef rib-eye",
+      "unit": "kg",
+      "par": 12,
+      "reorder_at": 6,
+      "supplier": "SUP-HENDRIKS",
+      "price_eur": 32.5
+    },
+    {
+      "id": "P-008",
+      "name": "Chicken thighs",
+      "unit": "kg",
+      "par": 10,
+      "reorder_at": 5,
+      "supplier": "SUP-HENDRIKS",
+      "price_eur": 8.9
+    },
+    {
+      "id": "P-009",
+      "name": "Minced beef",
+      "unit": "kg",
+      "par": 8,
+      "reorder_at": 4,
+      "supplier": "SUP-HENDRIKS",
+      "price_eur": 10.4
+    },
+    {
+      "id": "P-010",
+      "name": "Salmon fillet",
+      "unit": "kg",
+      "par": 6,
+      "reorder_at": 3,
+      "supplier": "SUP-NOORDZEE",
+      "price_eur": 24.0
+    },
+    {
+      "id": "P-011",
+      "name": "Cod fillet",
+      "unit": "kg",
+      "par": 5,
+      "reorder_at": 2,
+      "supplier": "SUP-NOORDZEE",
+      "price_eur": 21.5
+    },
+    {
+      "id": "P-012",
+      "name": "Whole milk",
+      "unit": "litre",
+      "par": 12,
+      "reorder_at": 6,
+      "supplier": "SUP-ZUIVEL",
+      "price_eur": 1.15
+    },
+    {
+      "id": "P-013",
+      "name": "Cream 35%",
+      "unit": "litre",
+      "par": 8,
+      "reorder_at": 4,
+      "supplier": "SUP-ZUIVEL",
+      "price_eur": 4.2
+    },
+    {
+      "id": "P-014",
+      "name": "Butter",
+      "unit": "block 1 kg",
+      "par": 5,
+      "reorder_at": 2,
+      "supplier": "SUP-ZUIVEL",
+      "price_eur": 9.6
+    },
+    {
+      "id": "P-015",
+      "name": "Parmesan",
+      "unit": "kg",
+      "par": 3,
+      "reorder_at": 1,
+      "supplier": "SUP-ZUIVEL",
+      "price_eur": 21.0
+    },
+    {
+      "id": "P-016",
+      "name": "Olive oil",
+      "unit": "can 5 L",
+      "par": 3,
+      "reorder_at": 1,
+      "supplier": "SUP-DELTA",
+      "price_eur": 38.5
+    },
+    {
+      "id": "P-017",
+      "name": "Flour",
+      "unit": "bag 10 kg",
+      "par": 2,
+      "reorder_at": 1,
+      "supplier": "SUP-DELTA",
+      "price_eur": 8.9
+    },
+    {
+      "id": "P-018",
+      "name": "Risotto rice",
+      "unit": "bag 5 kg",
+      "par": 2,
+      "reorder_at": 1,
+      "supplier": "SUP-DELTA",
+      "price_eur": 14.2
+    },
+    {
+      "id": "P-019",
+      "name": "Dishwasher tablets",
+      "unit": "bucket",
+      "par": 2,
+      "reorder_at": 1,
+      "supplier": "SUP-DELTA",
+      "price_eur": 26.0
+    },
+    {
+      "id": "P-020",
+      "name": "Pilsner keg",
+      "unit": "keg 20 L",
+      "par": 6,
+      "reorder_at": 3,
+      "supplier": "SUP-BRABANT",
+      "price_eur": 62.0
+    },
+    {
+      "id": "P-021",
+      "name": "House red wine",
+      "unit": "box 6 bottles",
+      "par": 4,
+      "reorder_at": 2,
+      "supplier": "SUP-BRABANT",
+      "price_eur": 39.0
+    },
+    {
+      "id": "P-022",
+      "name": "Sparkling water",
+      "unit": "crate 24",
+      "par": 5,
+      "reorder_at": 2,
+      "supplier": "SUP-BRABANT",
+      "price_eur": 13.8
+    }
+  ],
+  "alternative_offers": [
+    {
+      "product": "P-008",
+      "supplier": "SUP-DELTA",
+      "price_eur": 8.1,
+      "source_doc": "DOC-07"
+    },
+    {
+      "product": "P-001",
+      "supplier": "SUP-DELTA",
+      "price_eur": 13.2,
+      "source_doc": "DOC-07"
+    },
+    {
+      "product": "P-022",
+      "supplier": "SUP-DELTA",
+      "price_eur": 12.9,
+      "source_doc": "DOC-07"
+    }
+  ]
+}

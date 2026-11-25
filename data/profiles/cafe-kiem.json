@@ -1,0 +1,312 @@
+{
+  "id": "R-KIEM",
+  "name": "Café Kiem",
+  "type": "cafe",
+  "fictional": true,
+  "location": "Eindhoven, Strijp-S",
+  "independent": true,
+  "staff": 6,
+  "opening": {
+    "days": [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat"
+    ],
+    "hours": "08:00-18:00"
+  },
+  "language": "nl",
+  "people": [
+    {
+      "id": "U-SANNE",
+      "name": "Sanne Peeters",
+      "role": "owner",
+      "can_approve": true,
+      "channel": "whatsapp"
+    },
+    {
+      "id": "U-DAAN",
+      "name": "Daan Willems",
+      "role": "barista",
+      "can_approve": false,
+      "channel": "whatsapp"
+    }
+  ],
+  "autonomy": {
+    "suggest_order": "alone",
+    "send_order": "approval",
+    "check_delivery": "alone",
+    "check_invoice": "alone",
+    "dispute_invoice": "approval",
+    "compare_prices": "never",
+    "switch_supplier": "never"
+  },
+  "suppliers": [
+    {
+      "id": "SUP-BRANDHUIS",
+      "name": "Brandhuis Koffie",
+      "category": "coffee roaster",
+      "channel": "email",
+      "delivery_days": [
+        "Mon"
+      ],
+      "cutoff": {
+        "days_before": 3,
+        "time": "12:00"
+      },
+      "min_order_eur": 0,
+      "relationship": "contracted",
+      "agreement_doc": "DOC-09",
+      "note": "Espresso machine on loan; fixed bean prices until 30 June 2027."
+    },
+    {
+      "id": "SUP-KORENBLOEM",
+      "name": "Bakkerij De Korenbloem",
+      "category": "bakery",
+      "channel": "whatsapp",
+      "delivery_days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat"
+      ],
+      "cutoff": {
+        "days_before": 1,
+        "time": "14:00"
+      },
+      "min_order_eur": 0,
+      "relationship": "preferred",
+      "agreement_doc": "DOC-10",
+      "note": "Neighbourhood bakery, personal agreement with the owner."
+    },
+    {
+      "id": "SUP-ZUIVEL",
+      "name": "Zuivel Direct",
+      "category": "dairy",
+      "channel": "webshop",
+      "delivery_days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat"
+      ],
+      "cutoff": {
+        "days_before": 1,
+        "time": "18:00"
+      },
+      "min_order_eur": 30,
+      "relationship": "standard",
+      "agreement_doc": "DOC-08",
+      "note": "Volume price for cafés."
+    },
+    {
+      "id": "SUP-DELTA",
+      "name": "Groothandel Delta",
+      "category": "wholesaler (dry goods, packaging)",
+      "channel": "webshop",
+      "delivery_days": [
+        "Tue",
+        "Fri"
+      ],
+      "cutoff": {
+        "days_before": 1,
+        "time": "22:00"
+      },
+      "min_order_eur": 150,
+      "relationship": "standard",
+      "agreement_doc": "DOC-06",
+      "note": ""
+    },
+    {
+      "id": "SUP-BRABANT",
+      "name": "Brabant Dranken",
+      "category": "drinks",
+      "channel": "webshop",
+      "delivery_days": [
+        "Thu"
+      ],
+      "cutoff": {
+        "days_before": 2,
+        "time": "17:00"
+      },
+      "min_order_eur": 0,
+      "relationship": "standard",
+      "agreement_doc": "DOC-05",
+      "note": "No exclusivity for this café."
+    }
+  ],
+  "products": [
+    {
+      "id": "C-001",
+      "name": "Espresso beans, house blend",
+      "unit": "bag 1 kg",
+      "par": 10,
+      "reorder_at": 4,
+      "supplier": "SUP-BRANDHUIS",
+      "price_eur": 24.0
+    },
+    {
+      "id": "C-002",
+      "name": "Decaf beans",
+      "unit": "bag 1 kg",
+      "par": 2,
+      "reorder_at": 1,
+      "supplier": "SUP-BRANDHUIS",
+      "price_eur": 26.5
+    },
+    {
+      "id": "C-003",
+      "name": "Whole milk",
+      "unit": "litre",
+      "par": 30,
+      "reorder_at": 12,
+      "supplier": "SUP-ZUIVEL",
+      "price_eur": 1.1
+    },
+    {
+      "id": "C-004",
+      "name": "Oat milk, barista",
+      "unit": "litre",
+      "par": 18,
+      "reorder_at": 8,
+      "supplier": "SUP-DELTA",
+      "price_eur": 2.35
+    },
+    {
+      "id": "C-005",
+      "name": "Croissants",
+      "unit": "piece",
+      "order_mode": "daily_forecast",
+      "supplier": "SUP-KORENBLOEM",
+      "price_eur": 0.95,
+      "daily_need": {
+        "Mon": 30,
+        "Tue": 30,
+        "Wed": 35,
+        "Thu": 35,
+        "Fri": 45,
+        "Sat": 60
+      }
+    },
+    {
+      "id": "C-006",
+      "name": "Sourdough loaf",
+      "unit": "piece",
+      "order_mode": "daily_forecast",
+      "supplier": "SUP-KORENBLOEM",
+      "price_eur": 4.2,
+      "daily_need": {
+        "Mon": 6,
+        "Tue": 6,
+        "Wed": 6,
+        "Thu": 8,
+        "Fri": 8,
+        "Sat": 10
+      }
+    },
+    {
+      "id": "C-007",
+      "name": "Apple pie (12 slices)",
+      "unit": "piece",
+      "order_mode": "daily_forecast",
+      "supplier": "SUP-KORENBLOEM",
+      "price_eur": 19.5,
+      "daily_need": {
+        "Mon": 1,
+        "Tue": 1,
+        "Wed": 1,
+        "Thu": 2,
+        "Fri": 2,
+        "Sat": 3
+      }
+    },
+    {
+      "id": "C-008",
+      "name": "Banana bread",
+      "unit": "loaf",
+      "par": 2,
+      "reorder_at": 1,
+      "supplier": "SUP-KORENBLOEM",
+      "price_eur": 9.8
+    },
+    {
+      "id": "C-009",
+      "name": "Fresh mint",
+      "unit": "bunch",
+      "par": 6,
+      "reorder_at": 2,
+      "supplier": "SUP-DELTA",
+      "price_eur": 1.4
+    },
+    {
+      "id": "C-010",
+      "name": "Lemons",
+      "unit": "box 5 kg",
+      "par": 1,
+      "reorder_at": 0,
+      "supplier": "SUP-DELTA",
+      "price_eur": 12.9
+    },
+    {
+      "id": "C-011",
+      "name": "Takeaway cups 12 oz",
+      "unit": "sleeve 50",
+      "par": 10,
+      "reorder_at": 4,
+      "supplier": "SUP-DELTA",
+      "price_eur": 6.5
+    },
+    {
+      "id": "C-012",
+      "name": "Sugar sticks",
+      "unit": "box 1000",
+      "par": 1,
+      "reorder_at": 0,
+      "supplier": "SUP-DELTA",
+      "price_eur": 11.0
+    },
+    {
+      "id": "C-013",
+      "name": "Tea assortment",
+      "unit": "box 100",
+      "par": 2,
+      "reorder_at": 1,
+      "supplier": "SUP-DELTA",
+      "price_eur": 18.0
+    },
+    {
+      "id": "C-014",
+      "name": "Sparkling water",
+      "unit": "crate 24",
+      "par": 3,
+      "reorder_at": 1,
+      "supplier": "SUP-BRABANT",
+      "price_eur": 13.8
+    },
+    {
+      "id": "C-015",
+      "name": "Craft beer bottles",
+      "unit": "crate 24",
+      "par": 3,
+      "reorder_at": 1,
+      "supplier": "SUP-BRABANT",
+      "price_eur": 34.0
+    },
+    {
+      "id": "C-016",
+      "name": "Milk-system cleaner",
+      "unit": "bottle",
+      "par": 2,
+      "reorder_at": 1,
+      "supplier": "SUP-BRANDHUIS",
+      "price_eur": 14.5
+    }
+  ],
+  "alternative_offers": []
+}

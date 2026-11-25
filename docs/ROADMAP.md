@@ -14,9 +14,9 @@ Goal: choose a stack and be able to explain why.
 - [ ] Decision Log: stack (single agent in Python, LangGraph or other)
 - [ ] Decision Log: positioning of Betsy (single site, neutral, explainable, configurable approval)
 - [ ] Decision Log: why independent restaurants in Eindhoven
-- [ ] Niche card with real data + persona
+- [x] Niche card with real data + persona (25 Nov)
 - [x] Repo with docs/ROADMAP.md (25 Nov)
-- [ ] Two mock restaurant profiles
+- [x] Two mock restaurant profiles (25 Nov)
 
 ## G01 One agent · 1–5 Dec 2026
 
