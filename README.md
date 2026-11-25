@@ -1,31 +1,20 @@
 # betsy-
 Multi-agent procurement system for restaurants (Fontys MA-AAI personal project)
 
-## Project layout
+Betsy is an AI procurement team for small independent restaurants: it helps decide what to buy,
+from whom and when, and checks the invoices afterwards.
+
+The project is built one gate at a time. See [docs/ROADMAP.md](docs/ROADMAP.md) for the gates and
+their progress.
+
+## Current gate: G00 Foundations
+
+The stack has not been chosen yet, so this repository only contains the folders needed for G00.
+More folders are added when the gate that needs them starts.
 
 ```
-src/betsy/
-  core/        message envelope, pub/sub bus, base Agent class
-  agents/      Forecast, Inventory, Procurement, Supplier agents + bus topics
-  models/      domain model (Ingredient, StockLevel, Supplier, Offer, PurchaseOrder)
-  data.py      scenario loader (JSON)
-  main.py      CLI: runs one procurement cycle
-data/          sample scenarios
-docs/          architecture notes
-tests/         pytest suite
-```
-
-See [docs/architecture.md](docs/architecture.md) for the agent design.
-
-## Getting started
-
-```bash
-python -m venv .venv && source .venv/bin/activate
-pip install -e ".[dev]"
-
-betsy                                  # run one cycle on data/sample_scenario.json
-betsy --scenario path/to/file.json --horizon 5
-
-pytest
-ruff check .
+docs/
+  ROADMAP.md     gates and sub-phases (checklist)
+  decisions/     Decision Log entries
+data/            mock restaurant profiles
 ```
