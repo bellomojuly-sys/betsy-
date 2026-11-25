@@ -1,0 +1,33 @@
+{
+  "ingredients": [
+    {"sku": "TOM", "name": "Tomatoes", "unit": "kg", "perishable": true},
+    {"sku": "MOZ", "name": "Mozzarella", "unit": "kg", "perishable": true},
+    {"sku": "FLR", "name": "Flour 00", "unit": "kg", "perishable": false},
+    {"sku": "OIL", "name": "Olive oil", "unit": "l", "perishable": false}
+  ],
+  "stock": [
+    {"sku": "TOM", "on_hand": 8, "reorder_point": 10, "target_level": 25},
+    {"sku": "MOZ", "on_hand": 4, "reorder_point": 6, "target_level": 15},
+    {"sku": "FLR", "on_hand": 40, "reorder_point": 20, "target_level": 50},
+    {"sku": "OIL", "on_hand": 3, "reorder_point": 4, "target_level": 10}
+  ],
+  "avg_daily_usage": {"TOM": 4, "MOZ": 2.5, "FLR": 6, "OIL": 0.5},
+  "suppliers": [
+    {
+      "id": "fresh-farm", "name": "Fresh Farm BV", "lead_time_days": 1, "min_order_value": 50,
+      "catalog": {
+        "TOM": {"unit_price": 2.40, "available_qty": 30},
+        "MOZ": {"unit_price": 9.80, "available_qty": 10}
+      }
+    },
+    {
+      "id": "metro-wholesale", "name": "Metro Wholesale", "lead_time_days": 2, "min_order_value": 100,
+      "catalog": {
+        "TOM": {"unit_price": 2.10, "available_qty": 12},
+        "MOZ": {"unit_price": 10.50, "available_qty": 50},
+        "FLR": {"unit_price": 0.85, "available_qty": 500},
+        "OIL": {"unit_price": 7.90, "available_qty": 40}
+      }
+    }
+  ]
+}
