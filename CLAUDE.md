@@ -13,3 +13,7 @@
    request is understood.
 6. **English** for code, comments and documents in this repository.
 7. Mock data is provided by the owner; do not invent it.
+8. **End-of-session recap.** Before every session ends, without being asked, tell the owner
+   (in Italian) four things: what was done (files, commits, Notion), what is left (open work,
+   next step, blockers), what the owner must check (code, tests, decisions, anything not pushed
+   or not copied to Notion), and the key concepts the session touched (one line each).
